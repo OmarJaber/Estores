@@ -1,0 +1,196 @@
+{
+ "autoname": "format:SINV-{YYYY}-{#####}",
+ "creation": "2021-08-16 12:25:00.302802",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "email",
+  "mobile",
+  "column_break_2",
+  "posting_date",
+  "items_details_section",
+  "items",
+  "total",
+  "section_break_8",
+  "taxes",
+  "terms_of_usage_section",
+  "tu_name",
+  "terms_of_usage",
+  "payments_section",
+  "payments",
+  "paid_amount",
+  "section_break_17",
+  "total_without_tax",
+  "total_tax_amount",
+  "grand_total",
+  "unpaid_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "options": "Sales Invoice Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_details_section",
+   "fieldtype": "Section Break",
+   "label": "Items Details"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Sales Taxes and Charges",
+   "options": "Sales Taxes and Charges"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "terms_of_usage_section",
+   "fieldtype": "Section Break",
+   "label": "Terms of Usage"
+  },
+  {
+   "fieldname": "tu_name",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "options": "Terms of Usage"
+  },
+  {
+   "fetch_from": "tu_name.Description",
+   "fieldname": "terms_of_usage",
+   "fieldtype": "Text Editor",
+   "label": "Terms of Usage"
+  },
+  {
+   "fieldname": "payments_section",
+   "fieldtype": "Section Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "payments",
+   "fieldtype": "Table",
+   "label": "Sales Invoice Payment",
+   "options": "Sales Invoice Payment"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_without_tax",
+   "fieldtype": "Currency",
+   "label": "Total (Without Tax)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Total Tax",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "unpaid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unpaid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-08-16 14:45:52.792117",
+ "modified_by": "Administrator",
+ "module": "Estores",
+ "name": "Sales Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
