@@ -24,28 +24,25 @@
    "fieldtype": "Percent",
    "in_list_view": 1,
    "label": "Rate",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Total Amount",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "tax_value",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Tax Value",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2021-08-16 13:33:43.938771",
+ "modified": "2021-08-17 12:04:39.822009",
  "modified_by": "Administrator",
  "module": "Estores",
  "name": "Sales Taxes and Charges",
